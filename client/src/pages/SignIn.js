@@ -5,7 +5,7 @@ import '../styles/SignIn.css';
 
 // Create axios instance with base URL
 const api = axios.create({
-  baseURL: 'http://localhost:5000', // Default to localhost in development
+  baseURL: 'https://animated-carnival-5wgp79rqjxj3445p-5000.app.github.dev',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',

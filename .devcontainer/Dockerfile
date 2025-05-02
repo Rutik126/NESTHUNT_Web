@@ -25,5 +25,12 @@ COPY . .
 # Expose ports
 EXPOSE 3000 5000
 
+# Create startup script
+RUN echo '#!/bin/sh\n\
+cd /workspace/server && npm run dev & \
+cd /workspace/client && npm run dev & \
+wait' > /workspace/start.sh && \
+chmod +x /workspace/start.sh
+
 # Start both frontend and backend
-CMD ["sh", "-c", "cd server && npm run dev & cd client && npm run dev"] 
+CMD ["/workspace/start.sh"] 
