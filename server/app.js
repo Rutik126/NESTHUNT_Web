@@ -63,9 +63,9 @@ db.once('open', () => {
 
 // CORS configuration
 const allowedOrigins = [
-  process.env.CLIENT_URL,
-  process.env.PRODUCTION_CLIENT_URL
-].filter(Boolean);
+  'https://animated-carnival-5wgp79rqjxj3445p-3000.app.github.dev',
+  'http://localhost:3000'
+];
 
 app.use(cors({
   credentials: true,
